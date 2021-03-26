@@ -1,5 +1,5 @@
 {
-  "name": "mautic/cloudStorage",
+  "name": "mautic/plugin-cloudstorage",
   "description": "CloudStorage Plugin",
   "type": "mautic-plugin",
   "version": "1.0",
