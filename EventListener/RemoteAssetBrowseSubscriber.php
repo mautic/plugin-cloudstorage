@@ -24,6 +24,10 @@ class RemoteAssetBrowseSubscriber implements EventSubscriberInterface
         /** @var CloudStorageIntegration $integration */
         $integration = $event->getIntegration();
 
-        $event->setAdapter($integration->getAdapter());
+        try {
+            $event->setAdapter($integration->getAdapter());
+        } catch (\Exception $e) {
+            $event->setFailed($e->getMessage());
+        }
     }
 }
